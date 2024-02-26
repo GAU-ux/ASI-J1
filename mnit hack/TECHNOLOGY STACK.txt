@@ -1,0 +1,6 @@
+TECHNOLOGY STACK:
+
+dialogflow - chatbot
+vscode - website
+Gretle- ml model creation and data analysis
+Microsoft Forms- form generation

@@ -1,0 +1,136 @@
+/* Reset some default styles and apply a base font size */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Use a playful font */
+}
+
+/* Define a colorful background and text color for the entire page */
+body {
+    background-color: #ffcc00; 
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Style the header with a colorful gradient, text shadow, and center the content */
+header {
+
+    #logo {
+        width: 50px; /* Adjust the width as needed */
+        height: 50px; /* Adjust the height as needed */
+        margin-right: 10px; /* Add some spacing between the image and text */
+    }
+
+    background: linear-gradient(45deg, #ff3366, #6633ff); /* Gradient with funky colors */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 24px; /* Larger font size for header */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Style the navigation menu with bold and colorful links */
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ff3366; /* Funky pink */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #6633ff; /* Funky purple */
+}
+
+/* Style the hero section with a fun background image and colorful text */
+.hero {
+    background-image: url('funky-hero-bg.jpg'); /* Replace with a playful image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 150px 0;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 36px; /* Larger font size for emphasis */
+}
+
+/* Style the call-to-action button with a gradient background and a bold border */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff3366, #6633ff);
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px; /* Round button shape */
+    transition: background 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background: linear-gradient(45deg, #6633ff, #ff3366);
+    transform: scale(1.1); /* Slight scale on hover for a playful effect */
+}
+
+/* Style the about section with a colorful background and playful border */
+.about {
+    background-color: #ffcc00; /* Bright yellow background */
+    border: 5px solid #6633ff; /* Funky purple border */
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the services section with a grid layout and fun background image */
+.services {
+    background-image: url('funky-services-bg.jpg'); /* Replace with a playful image */
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+}
+
+.services ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.services li {
+    text-align: center;
+    padding: 30px;
+    border: 5px solid #ff3366; /* Funky pink border */
+    border-radius: 15px; /* Rounder corners */
+    background-color: #fff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.services h2 {
+    text-align: center;
+}
+
+/* Style the contact section with a colorful gradient background */
+.contact {
+    background: linear-gradient(45deg, #ff3366, #6633ff);
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the footer with a funky and visible background color */
+footer {
+    background-color: #6633ff; /* Funky purple */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}

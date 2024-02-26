@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-output"></div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+    </div>
+
+    <script>
+        const chatOutput = document.getElementById("chat-output");
+        const userInput = document.getElementById("user-input");
+
+        userInput.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                const userMessage = userInput.value.trim();
+                if (userMessage !== "") {
+                    // Display user message
+                    chatOutput.innerHTML += `<div class="user-message">${userMessage}</div>`;
+                    // Send user message to the backend
+                    fetch("/chat", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({ message: userMessage })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        // Display bot response
+                        chatOutput.innerHTML += `<div class="bot-message">${data.message}</div>`;
+                    })
+                    .catch(error => {
+                        console.error("Error sending message:", error);
+                    });
+
+                    // Clear the input field
+                    userInput.value = "";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
